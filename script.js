@@ -22,9 +22,6 @@ async function checkWeather(city) {
     // Waits for the response and converts it to a JavaScript object 
     let data = await response.json();
 
-    // Logs the parsed data
-    console.log(data);
-
     // now I'm going to select city temp humidity and other parameters from HTML and syn c values
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
@@ -53,6 +50,7 @@ async function checkWeather(city) {
             break;
     }
 
+    document.querySelector(".weather").style.display = "block";
 }
 searchBtn.addEventListener("click", () => {
     // call the function now! and get the city typed 
