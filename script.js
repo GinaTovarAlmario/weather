@@ -2,7 +2,7 @@
 // test connection
 console.log('Js ok!');
 
-const apiKey= "cec881978f505d7affe238e8969b488d";
+const apiKey = "cec881978f505d7affe238e8969b488d";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // how to get input field
@@ -15,7 +15,7 @@ const searchBtn = document.querySelector(".seacrh button");
 
 async function checkWeather(city) {
 
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);  
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
     // Waits for the response and converts it to a JavaScript object 
     let data = await response.json();
@@ -30,5 +30,7 @@ async function checkWeather(city) {
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
 }
-// call the function now!
-checkWeather();
+searchBtn.addEventListener("click", () => {
+    // call the function now!
+    checkWeather();
+})
