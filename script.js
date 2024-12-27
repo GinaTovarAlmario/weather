@@ -19,3 +19,5 @@ async function checkWeather() {
     // Logs the parsed data
     console.log(data);
 }
+// call the function now!
+checkWeather();
