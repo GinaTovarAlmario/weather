@@ -22,6 +22,8 @@ async function checkWeather() {
     // now I'm going to select city temp humidity and other parameters from HTML
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = data.main.temp;
+    document.querySelector(".humidity").innerHTML = data.main.humidity;
+
 
 }
 // call the function now!
