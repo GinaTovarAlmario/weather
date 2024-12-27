@@ -2,7 +2,6 @@
 // test connection
 console.log('Js ok!');
 
-const apiKey = "cec881978f505d7affe238e8969b488d";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // how to get input field
