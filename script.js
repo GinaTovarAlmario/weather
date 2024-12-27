@@ -7,7 +7,7 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 // how to get input field
 const searchBox = document.querySelector(".search input");
-const searchBtn = document.querySelector(".seacrh button");
+const searchBtn = document.querySelector(".search button");
 
 // The function makes an HTTP request to the weather API.
 // It waits for the response from the API (thanks to await).
@@ -30,7 +30,7 @@ async function checkWeather(city) {
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
 }
-searchBtn.addEventListener("click", () => {
-    // call the function now!
-    checkWeather();
+searchBtn.addEventListener("click", ()=>{
+    // call the function now! and get the city typed 
+    checkWeather(searchBox.value);
 })
