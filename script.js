@@ -3,15 +3,15 @@
 console.log('Js ok!');
 
 const apiKey= "cec881978f505d7affe238e8969b488d";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=genoa";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // The function makes an HTTP request to the weather API.
 // It waits for the response from the API (thanks to await).
 // After the response is received, the data can be processed further 
 
-async function checkWeather() {
+async function checkWeather(city) {
 
-    const response = await fetch(apiUrl + `&appid=${apiKey}`);  
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);  
 
     // Waits for the response and converts it to a JavaScript object 
     let data = await response.json();
