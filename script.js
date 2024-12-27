@@ -19,11 +19,11 @@ async function checkWeather() {
     // Logs the parsed data
     console.log(data);
 
-    // now I'm going to select city temp humidity and other parameters from HTML
+    // now I'm going to select city temp humidity and other parameters from HTML and syn c values
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = data.main.temp;
     document.querySelector(".humidity").innerHTML = data.main.humidity;
-
+    document.querySelector(".wind").innerHTML = data.wind.speed;
 
 }
 // call the function now!
