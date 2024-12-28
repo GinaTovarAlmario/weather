@@ -64,7 +64,18 @@ async function checkWeather(city) {
 
     document.querySelector(".weather").style.display = "block";
 }
-searchBtn.addEventListener("click", () => {
-    // call the function now! and get the city typed 
+
+function triggerCheckWeatherRequest() {
     checkWeather(searchBox.value);
+}
+
+searchBtn.addEventListener("click", triggerCheckWeatherRequest);
+
+searchBox.addEventListener("keyup", (keyboardEvent) => {
+
+    if (keyboardEvent && keyboardEvent.key === "Enter") {
+        triggerCheckWeatherRequest();
+    }
+
 })
+
