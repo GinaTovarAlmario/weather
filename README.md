@@ -35,7 +35,7 @@ Before running the project, ensure you have the following:
 2. Enter the name of a city in the search bar.
 3. View the current weather details for the selected city.
 
-![What is this](screenshot.jpg)
+<img src="./screenshot.jpg" width="250" height="auto">
 
 ## Notes
 
