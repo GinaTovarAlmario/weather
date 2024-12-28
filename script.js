@@ -1,6 +1,19 @@
+window.addEventListener("load", () => {
+    
+    if (!window.env) {
+        console.error("unable to load the environment object", window.env);
+    } else {
+        apiKey = window.env.openWeatherKey;
+    }
+
+})
+
 
 // test connection
 console.log('Js ok!');
+
+// to be filled with window.env.openWeatherKey
+let apiKey = null;
 
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
